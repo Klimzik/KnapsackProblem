@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Item Item = new Item(10, 8);
+            Problem problem = new Problem();
         }
     }
 }
