@@ -6,13 +6,13 @@
         public int Seed { get; set; }
         public List<Item> Items { get; set; } = new List<Item>();
 
-        public Problem(int n = 10, int seed = 10) 
+        public Problem(int capacity = 20,int n = 10, int seed = 10) 
         { 
             for (int i = 0; i < n; i++)
             {
                 Items.Add(new Item(seed));
             }
-            Solve(20);
+            Solve(capacity);
         }
 
         public Result Solve (int capacity)
@@ -31,7 +31,7 @@
                     capacity -= item.Weight;
                 }
             }
-            result.display();
+            result.Display();
             return result;
         }
     }

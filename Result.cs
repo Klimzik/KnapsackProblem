@@ -8,12 +8,10 @@
 
         public Result() { }
 
-        public void display() 
+        public void Display() 
         {
-            Console.WriteLine("Wartość przedmitów w plecaku: ");
-            Console.WriteLine(TotalValue);
-            Console.WriteLine("Waga przedmiotów w plecaku: ");
-            Console.WriteLine(TotalWeight);
+            Console.WriteLine("Wartość przedmitów w plecaku: "+ TotalValue);
+            Console.WriteLine("Waga przedmiotów w plecaku: "+ TotalWeight);
 
             foreach (var item in ResultItems)
             {
