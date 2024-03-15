@@ -1,17 +1,18 @@
 ﻿namespace KnapsackProblem
 {
-    public class Item
+    internal class Item
     {
         public int Value { get; set; }
         public int Weight{ get; set; }
         public double Ratio { get; set; }
 
-        public Item(int seed) 
+        public Item(Random random, int min = 1, int max = 10) 
         {
-            Random random = new Random();
-            Weight = random.Next(1,10);
-            Value = random.Next(1, 10);
-            Ratio = Value / Weight;
+            Weight = random.Next(min, max);
+            Value = random.Next(min, max);
+            Ratio = (double)Value / Weight;
+
+            //Console.WriteLine(Weight + "  " + Value + "  " + Ratio);
         }
     }
 }

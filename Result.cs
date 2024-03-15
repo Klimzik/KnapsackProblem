@@ -1,6 +1,6 @@
 ﻿namespace KnapsackProblem
 {
-    public class Result
+    internal class Result
     {
         public int TotalWeight { get; set; } = 0;
         public int TotalValue { get; set; } = 0;
@@ -10,7 +10,7 @@
 
         public void Display() 
         {
-            Console.WriteLine("Wartość przedmitów w plecaku: "+ TotalValue);
+            Console.WriteLine("Wartość przedmiotów w plecaku: "+ TotalValue);
             Console.WriteLine("Waga przedmiotów w plecaku: "+ TotalWeight);
 
             foreach (var item in ResultItems)
@@ -20,7 +20,16 @@
         }
         public override string ToString()
         {
-            return TotalWeight.ToString();
+            string resultString = "Wartość przedmiotów w plecaku: " + TotalValue + Environment.NewLine;
+            resultString += "Waga przedmiotów w plecaku: " + TotalWeight + Environment.NewLine;
+
+            foreach (var item in ResultItems)
+            {
+                resultString += "Wartość: " + item.Value + ". Waga: " + item.Weight + Environment.NewLine;
+            }
+
+            return resultString;
         }
+
     }
 }

@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Problem problem = new Problem();
+            Problem problem = new Problem(10, 20);
+            problem.Solve();
         }
     }
 }
